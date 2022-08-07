@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({
 }))
 
 const razorpay = new Razorpay({
-    key_id: 'rzp_test_99Kx2xlSYCl4cU',
-    key_secret: 'L3yiJRYsLb9RbuUBMZ2BEcpi'
+    key_id: 'rzp_live_718VmpozUEnomK',
+    key_secret: '0ApfTHXzP8TwqFPNtiV32OQk'
 })
 
 mongoose.connect('mongodb+srv://pradeep:pradeep@cluster0.i7i2rti.mongodb.net/?retryWrites=true&w=majority', {
