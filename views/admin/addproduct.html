@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    To Add Product Fill The Details Below
+
+    <form action="/admin/product" method="POST" enctype="multipart/form-data">
+        <input type="text" name="ProductName" placeholder="Product Name">
+        <input type="text" name="ProductHeading" placeholder="Product Heading">
+        <input type="text" name="Price" placeholder="Price">
+        <input type="file" name="BackgroundImage" placeholder="Image" accept="image/*">
+        <input type="file" name="FrontImage" placeholder="Image" accept="image/*">
+        <input type="text" name="ProductDescription" placeholder="Product Description">
+        <input type="text" name="Material" placeholder="Material">
+        <input type="text" name="Color" placeholder="Color">
+        <input type="text" name="Dimension" placeholder="Dimension">
+        <input type="text" name="Type" id="Type" placeholder="Type">
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+</html>

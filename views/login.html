@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/login.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+  <!-- <div>
+        <form action="/login" method="POST">
+            <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+            <br>
+            <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+            <br>
+            <input type="submit" value="Submit" id="submit" />
+        </form>
+    </div> -->
+
+
+
+  <section class="vh-100">
+    <a href="/" style="margin: 20px;"><i class="fa fa-home" aria-hidden="true">Home</i></a>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <!-- class="card" -->
+          <div style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://i.postimg.cc/G3qBB0jn/DP-logo.jpg" alt="login form"
+                  class="rounded mx-auto d-block img-fluid"
+                  style="border-radius: 1rem 0 0 1rem; margin-top: 75px; margin-left: 100px;" />
+                <div class="t">
+                  Registering for this site allows you to access your order status and history. Just fill in the fields
+                  below, and we'll get a new account set up for you in no time. We will only ask you for information
+                  necessary to make the purchase process faster and easier
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+
+                  <form action="/login" method="POST">
+
+                    <!-- <div class="d-flex align-items-center mb-3 pb-1">
+                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                            <span class="h1 fw-bold mb-0">Logo</span>
+                                        </div> -->
+
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your
+                      account</h5>
+                    <% if(messages.error) {%>
+                      <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px; color: red;">
+                        <%= messages.error %>
+                      </h5>
+                      <% } %>
+
+                        <div class="form-outline mb-2">
+                          <input type="email" id="form2Example17" id="email" name="email"
+                            class="form-control form-control-lg" required />
+                          <label class="form-label" for="form2Example17">Email address</label>
+                        </div>
+
+                        <div class="form-outline mb-2">
+                          <input type="password" id="form2Example27" name="password" id="password"
+                            class="form-control form-control-lg" required />
+                          <label class="form-label" for="form2Example27">Password</label>
+                        </div>
+
+                        <div class="pt-1 mb-4">
+                          <button class="btn btn-dark btn-lg btn-block" type="submit">LOGIN</button>
+                        </div>
+
+
+                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="/signup"
+                            style="color: #393f81;">Register here</a></p>
+                        <a href="/terms" class="small text-muted">Terms of use.</a>
+                        <a href="/privacy-policy" class="small text-muted">Privacy policy</a>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="small-container" style="font-size: 1rem;">
+
+    <div class="row" style="margin: 20px;">
+      <div class="col-lg-3 card-body">
+        <div class="row">
+          <div class="col-lg-2" style="margin: auto;">
+            <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/icon_handmade.jpg?v=1575543606"
+              data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/icon_handmade.jpg?v=1575543606"
+              class=" lazyloaded" alt="">
+          </div>
+          <div class="col-lg-10">
+            <div>
+              <h5>
+                HANDCRAFTED PERFECTION
+              </h5>
+            </div>
+            <div>
+              All Our Products are handcrafted with love and perfection.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 card-body">
+        <div class="row">
+          <div class="col-lg-2" style="margin: auto;">
+            <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic4.png?v=1575544143"
+              data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic4.png?v=1575544143" class=" lazyloaded"
+              alt="">
+          </div>
+          <div class="col-lg-10">
+            <div>
+              <h5>
+                24/7 SUPPORT ONLINE
+              </h5>
+            </div>
+            <div>
+              Our Customer Support Team is available all the time to answer all the queries. For us, each query is a
+              special request and not just another ticket.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 card-body">
+        <div class="row">
+          <div class="col-lg-2" style="margin: auto;">
+            <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic3.png?v=1575544249"
+              data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic3.png?v=1575544249" class=" lazyloaded"
+              alt="">
+          </div>
+          <div class="col-lg-10">
+            <div>
+              <h5>
+                200,000+ Happy Customers
+              </h5>
+            </div>
+            <div>
+              This is all because of the Love and Vote of confidence we get from our lovely people around the globe. We
+              are working 24 x 7 x 365 to make more people be a part of this huge family.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 card-body">
+        <div class="row">
+          <div class="col-lg-2" style="margin: auto;">
+            <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic1_1.png?v=1575544339"
+              data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic1_1.png?v=1575544339" class=" lazyloaded"
+              alt="">
+          </div>
+          <div class="col-lg-10">
+            <div>
+              <h5>
+                Authenticity Assured
+              </h5>
+            </div>
+            <div>
+              Each and Every product goes through a 3-step quality check process before dispatching. All the details
+              mentioned in this product page will be fulfilled in your product as it is </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/myorder.css">
+</head>
+<body>
+
+    <div>
+        <a href="/customer/order">Back</a>
+    </div>
+    <main>
+
+        <div>
+            <h4>Statis:<%=order.status%></h4>
+        </div>
+        <div class="basket">
+            <div class="basket-labels">
+                <ul>
+                    <li class="item item-heading">Item</li>
+                    <li class="price">Price</li>
+                    <li class="quantity">Quantity</li>
+                    <li class="subtotal">Subtotal</li>
+                </ul>
+            </div>
+            <div>
+                <% for(let product of Object.values(a)) { %>
+                    <div class="basket-product">
+                        <div class="item">
+                            <div class="product-image">
+                                <img src="<%=product.item.FrontImage%>" alt="Error In Displaying Images"
+                                    class="product-frame">
+                            </div>
+                            <div class="product-details">
+                                <h1><strong><span class="item-quantity"><%= product.qty%>
+                                        </span> x <%= product.item.ProductName%></strong>
+                                </h1>
+                                <p><strong>
+                                        <%= product.item.Dimension %>
+                                    </strong></p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            &#8377;<%= product.item.Price %>
+                        </div>
+                        <div class="quantity">
+                            <b><%= product.qty %></b>
+                           
+                        </div>
+                        <div class="subtotal">&#8377; <%= product.item.Price * product.qty %></div>
+                    </div>
+                    <% } %>
+            </div>
+
+            <div>
+                <h1 class="detail"><b> Billing Details </b></h1>
+                <div class="det">
+                    Address:<%= order.address %>
+                </div>
+                <div class="det">
+                    Phone Number:<%= order.phone %>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+            
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DP Hand Made</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="font-family: 'Poppins',sans-serif; ">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+
+
+    <div class="m-6">
+        <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-expand">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand">
+                    <img src='https://i.postimg.cc/G3qBB0jn/DP-logo.jpg' height="60" width="70" alt='DP-logo' />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav navbar-right ms-auto">
+                        <% if(session.user) { %>
+                            <a href="/logout" class="nav-item nav-link">Logout</a>
+                            <a href="/customer/order" class="nav-item nav-link">My Orders</a>
+                            <% } else { %>
+                                <a href="/signup" class="nav-item nav-link">Sign Up</a>
+                                <a href="/login" class="nav-item nav-link">Login</a>
+                                <% } %>
+                                    <a href="/cart" class="nav-item nav-link">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        <h2 style="text-align: center;">Privacy-Policy</h2>
+        <p>
+            When you visit the Site, we automatically collect certain information about your device, including
+            information about your web browser, IP address, time zone, and some of the cookies that are installed on
+            your device. Additionally, as you browse the Site, we collect information about the individual web pages or
+            products that you view, what websites or search terms referred you to the Site, and information about how
+            you interact with the Site. We refer to this automatically-collected information as “Device Information”.
+        </p>
+        <p>
+            We use the Device Information that we collect to help us screen for potential risk and fraud (in particular,
+            your IP address), and more generally to improve and optimize our Site (for example, by generating analytics
+            about how our customers browse and interact with the Site, and to assess the success of our marketing and
+            advertising campaigns).
+        </p>
+        <p>
+            We share your Personal Information with third parties to help us use your Personal Information, as described
+            above. For example, we use Shopify to power our online store--you can read more about how Shopify uses your
+            Personal Information here: https://www.shopify.com/legal/privacy. We also use Google Analytics to help us
+            understand how our customers use the Site -- you can read more about how Google uses your Personal
+            Information here: https://www.google.com/intl/en/policies/privacy/. You can also opt-out of Google Analytics
+            here: https://tools.google.com/dlpage/gaoptout.
+        </p>
+    </div>
+
+
+    <div class="small-container" style="font-size: 1rem;">
+
+        <div class="row" style="margin: 20px;">
+            <div class="col-lg-3 card-body">
+                <div class="row">
+                    <div class="col-lg-2" style="margin: auto;">
+                        <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/icon_handmade.jpg?v=1575543606"
+                            data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/icon_handmade.jpg?v=1575543606"
+                            class=" lazyloaded" alt="">
+                    </div>
+                    <div class="col-lg-10">
+                        <div>
+                            <h5>
+                                HANDCRAFTED PERFECTION
+                            </h5>
+                        </div>
+                        <div>
+                            All Our Products are handcrafted with love and perfection.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 card-body">
+                <div class="row">
+                    <div class="col-lg-2" style="margin: auto;">
+                        <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic4.png?v=1575544143"
+                            data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic4.png?v=1575544143"
+                            class=" lazyloaded" alt="">
+                    </div>
+                    <div class="col-lg-10">
+                        <div>
+                            <h5>
+                                24/7 SUPPORT ONLINE
+                            </h5>
+                        </div>
+                        <div>
+                            Our Customer Support Team is available all the time to answer all the queries. For us, each
+                            query is a
+                            special request and not just another ticket.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 card-body">
+                <div class="row">
+                    <div class="col-lg-2" style="margin: auto;">
+                        <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic3.png?v=1575544249"
+                            data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic3.png?v=1575544249"
+                            class=" lazyloaded" alt="">
+                    </div>
+                    <div class="col-lg-10">
+                        <div>
+                            <h5>
+                                200,000+ Happy Customers
+                            </h5>
+                        </div>
+                        <div>
+                            This is all because of the Love and Vote of confidence we get from our lovely people around
+                            the globe. We
+                            are working 24 x 7 x 365 to make more people be a part of this huge family.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 card-body">
+                <div class="row">
+                    <div class="col-lg-2" style="margin: auto;">
+                        <img src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic1_1.png?v=1575544339"
+                            data-src="//cdn.shopify.com/s/files/1/0248/2333/2927/files/ic1_1.png?v=1575544339"
+                            class=" lazyloaded" alt="">
+                    </div>
+                    <div class="col-lg-10">
+                        <div>
+                            <h5>
+                                Authenticity Assured
+                            </h5>
+                        </div>
+                        <div>
+                            Each and Every product goes through a 3-step quality check process before dispatching. All
+                            the details
+                            mentioned in this product page will be fulfilled in your product as it is </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+
+                <div class="row mt-3">
+
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                            We do make sure that every customer gets a Great Buying Experience with DP Hand Made. A
+                            Great Buying
+                            Experience comes with Great Customer Support. Our Customer Support Team is available all the
+                            time to
+                            answer all the queries. For us, each query is a special request and not just another ticket
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Customer Services
+                        </h6>
+                        <p>
+                            <a href="/shipping-policy" class="text-reset">Shipping Policy</a>
+                        </p>
+                        <p>
+                            <a href="/privacy-policy" class="text-reset">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="/terms" class="text-reset">Term Of Services</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i>1517 Indra Colony Pratap Nagar Jodhpur,Rajasthan</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            dphandmade2022@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +91 8003093966</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022
+            <a class="text-reset fw-bold" href="/">DP Hand Made</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="/static/home.js"></script>
+</body>
+
+
+</html>

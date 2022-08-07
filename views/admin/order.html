@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+    
+
+
+    <section class="orders light-section">
+        <div class="container mx-auto pt-12">
+            <h1 class="font-bold text-lg mb-4">All orders</h1>
+            <table class="w-full table-auto bg-white">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Orders</th>
+                        <th class="px-4 py-2 text-left">Customer</th>
+                        <th class="px-4 py-2 text-left">Address</th>
+                        <th class="px-4 py-2 text-left">status</th>
+                        <th class="px-4 py-2 text-left">Placed at</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <script src="/static/admin.js"></script>
+</body>
+</html>
